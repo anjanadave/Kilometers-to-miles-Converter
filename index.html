@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kilometers to miles Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Kilometers to miles Converter</h1>
+        <label for="kmInput" class="lable">Enter distance in in kilometers: </label>    
+        <input type="kmInput" id="kmInput" class="one" name="kmInput">
+
+        <button onclick="convert()">Convert to Miles</button>
+        <p id="result"></p>
+      
+        <script>
+            function convert() {
+                let km = parseFloat(document.getElementById("kmInput").value);
+
+                let miles = km * 0.621371
+
+                document.getElementById("result").innerHTML = `${km} kilometers is approximately ${miles.toFixed(5)} miles.`;
+            }
+        </script>
+    </div>
+</body>
+</html>
